@@ -1,0 +1,21 @@
+<a href="note-form" class="btn btn-primary float-end m-2">Add new note</a>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Your thoughts</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of service.list">
+                <td (click)="populateForm(note)">{{note.bookId}}</td>
+                <td (click)="populateForm(note)">{{note.comment}}</td>
+
+                <td>
+                    <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(note.noteId)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
