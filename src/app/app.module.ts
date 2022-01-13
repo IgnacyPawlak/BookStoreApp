@@ -8,6 +8,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { BookFormComponent } from './book/book-form/book-form.component';
+import { NoteComponent } from './note/note.component';
+import { NoteFormComponent } from './note/note-form/note-form.component';
+import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
@@ -18,6 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     BookComponent,
     BookFormComponent,
+    NoteComponent,
+    NoteFormComponent,
+    HomeComponent,
     UserComponent,
     RegistrationComponent
   ],

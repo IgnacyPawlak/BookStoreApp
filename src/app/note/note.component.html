@@ -1,0 +1,32 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">List Of Notes</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-note-form></app-note-form>
+    </div>
+    <div class="col-md-6">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Note Id</th>
+                <th>USer Id</th>
+                <th>Book Id</th>
+                <th>Comment</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of service.list">
+                <td (click)="populateForm(note)">{{note.noteId}}</td>
+                <td (click)="populateForm(note)">{{note.userId}}</td>
+                <td (click)="populateForm(note)">{{note.bookId}}</td>
+                <td (click)="populateForm(note)">{{note.comment}}</td>
+
+                <td>
+                    <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(note.noteId)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
