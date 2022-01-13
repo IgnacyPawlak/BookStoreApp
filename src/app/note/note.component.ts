@@ -1,11 +1,12 @@
 import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from '@angular/forms';
-import { Note } from 'app/shared/note.model';
-import { NoteService } from 'app/shared/note.service';
-import { Book } from 'app/shared/book.model';
-import { BookService } from 'app/shared/book.service';
-import { UserService } from 'app/shared/user.service'; 
+import { Note } from 'src/app/shared/note.model';
+import { NoteFormComponent } from './note-form/note-form.component';
+import { NoteService } from 'src/app/shared/note.service';
+import { Book } from 'src/app/shared/book.model';
+import { BookService } from 'src/app/shared/book.service';
+import { UserService } from 'src/app/shared/user.service'; 
 
 
 @Component({

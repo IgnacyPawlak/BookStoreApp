@@ -2,7 +2,7 @@ import { ToastrService } from 'ngx-toastr';
 import { NoteService } from './../../shared/note.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Note } from '../../shared/note.model';
+import { Note } from 'src/app/shared/note.model';
 
 @Component({
   selector: 'app-note-form',
