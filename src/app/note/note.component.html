@@ -10,14 +10,17 @@
     <table class="table">
         <thead class="thead-light">
             <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Your thoughts</th>
+                <th>Note Id</th>
+                <th>USer Id</th>
+                <th>Book Id</th>
+                <th>Comment</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let note of service.list">
+                <td (click)="populateForm(note)">{{note.noteId}}</td>
+                <td (click)="populateForm(note)">{{note.userId}}</td>
                 <td (click)="populateForm(note)">{{note.bookId}}</td>
                 <td (click)="populateForm(note)">{{note.comment}}</td>
 

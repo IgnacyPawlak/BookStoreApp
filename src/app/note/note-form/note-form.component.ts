@@ -18,7 +18,7 @@ export class NoteFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form:NgForm){
+  onSubmitNote(form:NgForm){
     if(this.service.formData.noteId==0) this.insertRecord(form);
     else
     this.updateRecord(form);
