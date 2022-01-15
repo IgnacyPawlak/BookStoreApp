@@ -1,23 +1,27 @@
-<div class="jumbotron py-3">
-    <h1 class="display-4 text-center">List Of Books</h1>
+<div>
+    <h1 class="MyTitle m-3">Lista oficjalnych tytułów:</h1>
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <app-book-form></app-book-form>
     </div>
-    <div class="col-md-6">
+    </div>
+<div class="row">
+    <div class="col-md-12">
         <table class="table">
             <thead class="thead-light">
                 <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Description</th>
+                    <th>Numer</th>
+                    <th>Tytuł</th>
+                    <th>Autor</th>
+                    <th>Opis</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let b of service.list">
+                <tr *ngFor="let b of service.list">            
+                    <td (click)="populateForm(b)">{{b.id}}</td>
                     <td (click)="populateForm(b)">{{b.title}}</td>
                     <td (click)="populateForm(b)">{{b.author}}</td>
                     <td (click)="populateForm(b)">{{b.description}}</td>

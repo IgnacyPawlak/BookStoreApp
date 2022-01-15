@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-
+import { SiteInDevelopmentComponent } from './site-in-development/site-in-development.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -35,7 +35,8 @@ const routes: Routes = [
     children: [
       {path: 'note-form', component: NoteFormComponent}
     ]
-  }
+  },
+  {path:'site-in-development', component: SiteInDevelopmentComponent}
 ];
 
 @NgModule({
