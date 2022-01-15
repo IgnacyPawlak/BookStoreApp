@@ -1,3 +1,8 @@
+import { ProfileComponent } from './user/profile/profile.component';
+import { BoardUserComponent } from './user/board-user/board-user.component';
+import { BoardAdminComponent } from './user/board-admin/board-admin.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,8 +15,10 @@ import { BookFormComponent } from './book/book-form/book-form.component';
 import { NoteComponent } from './note/note.component';
 import { NoteFormComponent } from './note/note-form/note-form.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
+import {authInterceptorProviders} from './auth/helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,12 @@ import { AppRoutingModule } from './app-routing.module';
     BookFormComponent,
     NoteComponent,
     NoteFormComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    BoardAdminComponent,
+    BoardUserComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +40,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    AppRoutingModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
