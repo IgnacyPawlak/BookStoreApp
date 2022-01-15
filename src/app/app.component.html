@@ -1,3 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <ul class="navbar-nav">
+    
+    <li class="nav-item">
+      <a href="/note" class="nav-link" routerLink="note">Moja kolekcja książek</a>
+    </li>
+    <li class="nav-item">
+ 
+      <a href="/pending" class="nav-link" routerLink="pending">Oczekujące na potwierdzenie</a>
+    </li>
+    <li class="nav-item">
+
+      <a class="nav-link">Użytkownicy (mockup)</a>
+    </li>
+    <li class="nav-item">
+
+      <a href="/book" class="nav-link" routerLink="book">Książki</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">KONTO</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a  class="dropdown-item" href="/Settings">Ustawienia</a>
+        <hr class="dropdown-divider" role="separator">
+        <a  class="dropdown-item" href="/Login">Zaloguj</a>
+        <a  class="dropdown-item" href="/Logout">Wyloguj</a>
+      </div>
+    </li>
+  </ul>
+</div>
+</nav>
+
+
+<!-- 
+
 <div id="app">
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom">
     <a href="#" class="navbar-brand">BookStore</a>
@@ -39,10 +80,10 @@
         <a href class="nav-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 
-<div class="container">
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom">
+  <div class="container">
+     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom">
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,5 +99,5 @@
       </ul>
     </div>
   </nav> -->
-  <router-outlet></router-outlet>
-</div>
+    <router-outlet></router-outlet>
+  </div>

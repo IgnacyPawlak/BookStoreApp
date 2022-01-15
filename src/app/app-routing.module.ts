@@ -1,3 +1,4 @@
+import { PendingComponent } from './book/pending/pending.component';
 import { BoardAdminComponent } from './user/board-admin/board-admin.component';
 import { BoardUserComponent } from './user/board-user/board-user.component';
 import { ProfileComponent } from './user/profile/profile.component';
@@ -25,8 +26,10 @@ const routes: Routes = [
     path: 'book', component: BookComponent,
     children: [
       {path:'book-form', component: BookFormComponent}
+     
     ]
   },
+  {path: 'pending', component: PendingComponent},
   {
     path: 'note', component: NoteComponent,
     children: [
