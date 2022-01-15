@@ -30,7 +30,11 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     ReactiveFormsModule
   ],
+<<<<<<< Updated upstream
   providers: [UserService],
+=======
+  providers: [authInterceptorProviders],
+>>>>>>> Stashed changes
   bootstrap: [AppComponent]
 })
 export class AppModule { }

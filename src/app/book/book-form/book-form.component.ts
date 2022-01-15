@@ -19,7 +19,7 @@ export class BookFormComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    if(this.service.formData.id==0) this.insertRecord(form);
+    if(this.service.formData.bookId==0) this.insertRecord(form);
     else
     this.updateRecord(form);
   }
