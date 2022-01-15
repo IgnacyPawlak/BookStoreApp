@@ -1,6 +1,6 @@
 export class Note {
-    noteId:number=0;
-    userId:number=0;
-    bookId:number=0;
-    comment:string="";
+    noteId:number = 0;
+    userId:string = "";
+    bookId:number = 0;
+    comment:string = "";
 }

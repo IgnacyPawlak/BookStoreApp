@@ -14,6 +14,8 @@ export class NoteService {
 
   list: Note[];
 
+  listOfNotes: [];
+
   postNote(){
    return this.http.post(this.baseURL,this.formData);
   }
@@ -24,6 +26,14 @@ export class NoteService {
 
   deleteNote(id:number){
     return this.http.delete(`${this.baseURL}/${id}`);
+  }
+
+  getBookByNoteId(id:number){
+    return this.http.get(`${this.baseURL}/GetBookByNoteId/${id}`);
+  }
+
+  refreshListOfNotes(){
+    
   }
 
   refreshList(){

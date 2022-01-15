@@ -1,25 +1,19 @@
 <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmitNote(form)">
-    <!-- <input type="hidden" name="bookId"
-    [value]="service.formData.noteId"/> -->
-    <div class="form-group">
-        <label>note id</label>
-        <input class="form-control form-control-lg" placeholder="noteId"
-        name="noteId" #title="ngModel" [(ngModel)]="service.formData.noteId" required />
-    </div>
+    <input type="hidden" name="noteId" [value]="service.formData.noteId"/>
     <div class="form-group">
         <label>book id</label>
         <input class="form-control form-control-lg" placeholder="bookId"
-        name="bookId" #title="ngModel" [(ngModel)]="service.formData.bookId" required />
+        name="userId" #userId="ngModel" [(ngModel)]="service.formData.bookId" required [class.invalid]="bookId.invalid && bookId.touched"/>
     </div>
     <div class="form-group">
         <label>user id</label>
         <input class="form-control form-control-lg" placeholder="userId"
-        name="userId" #title="ngModel" [(ngModel)]="service.formData.userId" required />
+        name="bookId" #bookId="ngModel" [(ngModel)]="service.formData.userId" required [class.invalid]="userId.invalid && userId.touched"/>
     </div>
     <div class="form-group">
         <label>Comment</label>
         <input class="form-control form-control-lg" placeholder="comment"
-        name="comment" #title="ngModel" [(ngModel)]="service.formData.comment" required/>
+        name="comment" #comment="ngModel" [(ngModel)]="service.formData.comment" required [class.invalid]="comment.invalid && comment.touched"/>
     </div>
 
     <div class="form-group">

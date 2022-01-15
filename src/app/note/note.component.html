@@ -30,3 +30,27 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div class="row">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Book title</th>
+                <th>Author</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of bookService.list">
+                <td >{{book.title}}</td>
+                <td >{{book.author}}</td>
+                <td >{{book.description}}</td>
+<!-- 
+                <td>
+                    <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(book.id)"></i>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+    

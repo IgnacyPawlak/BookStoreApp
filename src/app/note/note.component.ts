@@ -6,9 +6,6 @@ import { NoteFormComponent } from './note-form/note-form.component';
 import { NoteService } from 'src/app/shared/note.service';
 import { Book } from 'src/app/shared/book.model';
 import { BookService } from 'src/app/shared/book.service';
-import { UserService } from 'src/app/shared/user.service'; 
-
-
 @Component({
     selector: 'app-note',
     templateUrl: './note.component.html',
@@ -20,10 +17,11 @@ import { UserService } from 'src/app/shared/user.service';
 export class NoteComponent implements OnInit {
 
   constructor(public service: NoteService,
-    private toastr:ToastrService) { }
+    private toastr:ToastrService, public bookService:BookService) { }
 
   ngOnInit(): void {
     this.service.refreshList();
+    this.bookService.refreshList();
   }
 
   populateForm(selectedRecord:Note){

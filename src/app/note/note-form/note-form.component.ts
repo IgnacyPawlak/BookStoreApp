@@ -1,3 +1,4 @@
+import { BookService } from './../../shared/book.service';
 import { ToastrService } from 'ngx-toastr';
 import { NoteService } from './../../shared/note.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,7 @@ import { Note } from 'src/app/shared/note.model';
 })
 export class NoteFormComponent implements OnInit {
 
-  constructor(public service:NoteService,
+  constructor(public service:NoteService,public bookService:BookService,
     private toastr:ToastrService) { }
 
   ngOnInit(): void {
