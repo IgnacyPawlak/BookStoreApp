@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --main-color: rgb(233, 156, 84);
-    --text-color: rgb(48, 48, 48);
-    --label-color: black;
-    --input-color: rgb(53, 52, 52);
-    --button-color: black;
+    --maiN-color: #e1e5f2;
+    --text-color: #022b3a;
+    --label-color: #1f7a8c;
+    --input-color: #022b3a;
+    --button-color: #1f7a8c;
+    --accent-color: #e4e4e4;
+    --border-rad: 20px;
 }
+
+body{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
 .form-group label {
     color: var(--label-color);
 }
@@ -32,21 +40,17 @@ input.invalid {
     border-color: red;
 }
 
-body{
-    background-color: var(--main-color);
-    color: var(--text-color);
-}
 
 input.form-control, input.forom-control:focus{
     background-color: var(--main-color);
     color: black;
     border-color: black;
-    border-radius: 0px;
+    border-radius: var(--border-rad);
     border-width: 2px;
 }
 
 button[type=submit].btn{
-    border-radius: 20px;
+    border-radius: var(--border-rad);
     background-color: var(--button-color);
     color: #fff;
     border-color: var(--button-color);
@@ -74,4 +78,20 @@ form{
 
 .bg-transparent{
     background-color: transparent;
+}
+
+.jumbotron{
+    background-color: var(--main-color);
+}
+
+table{
+    border-radius: var(--border-rad);
+}
+.thead-light{
+    background-color: var(--accent-color) !important;
+}
+
+th{
+    /* border-collapse: separate !important; */
+    background-color: transparent !important;  
 }
